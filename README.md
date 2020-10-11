@@ -366,3 +366,9 @@ Edit the configuration file settings.json.
 
 **Reference**   
 <https://marketplace.visualstudio.com/items?itemName=kokororin.vscode-phpfmt>   
+
+---
+
+## Reference
+
+[MIT License](LICENSE)
