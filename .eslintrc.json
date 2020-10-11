@@ -5,11 +5,7 @@
   "plugins": ["prettier"],
   "extends": ["eslint:recommended", "plugin:prettier/recommended"],
   "parserOptions": {
-    "ecmaVersion": 6,
-    "sourceType": "script",
-    "ecmaFeatures": {
-      "jsx": false
-    }
+    "ecmaVersion": 6
   },
   "ignorePatterns": ["node_modules/", "dist/", "vendors/"],
   "rules": {
