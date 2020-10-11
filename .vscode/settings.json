@@ -50,10 +50,12 @@
   "scss.validate": false,
   "stylelint.enable": true,
   "stylelint.config": {
-    "plugins": ["stylelint-scss", "stylelint-order"],
-    "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
+    "plugins": ["stylelint-scss", "stylelint-order", "stylelint-prettier"],
+    "extends": ["stylelint-prettier/recommended"],
     "rules": {
+      "prettier/prettier": [true, { "singleQuote": true }],
       "indentation": 2,
+      "string-quotes": "single",
       "declaration-block-trailing-semicolon": "always",
       "selector-pseudo-element-colon-notation": "single",
       "font-family-no-missing-generic-family-keyword": null,
@@ -529,12 +531,13 @@
   },
   "[css]": {
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
   },
   "[scss]": {
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
   },
+
   "[javascript]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -562,6 +565,7 @@
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+
   "[php]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "kokororin.vscode-phpfmt"

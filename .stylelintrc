@@ -1,14 +1,21 @@
 {
   "plugins": [
     "stylelint-scss",
-    "stylelint-order"
+    "stylelint-order",
+    "stylelint-prettier"
   ],
   "extends": [
-    "stylelint-config-standard",
-    "stylelint-config-prettier"
+    "stylelint-prettier/recommended"
   ],
   "rules": {
+    "prettier/prettier": [
+      true,
+      {
+        "singleQuote": true
+      }
+    ],
     "indentation": 2,
+    "string-quotes": "single",
     "declaration-block-trailing-semicolon": "always",
     "selector-pseudo-element-colon-notation": "single",
     "font-family-no-missing-generic-family-keyword": null,

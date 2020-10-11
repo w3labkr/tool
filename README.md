@@ -7,12 +7,23 @@ Configuration settings that are used frequently.
 ```
 {
   "workbench.colorTheme": "One Dark Pro",
+}
+```
+
+**Reference**   
+<https://marketplace.visualstudio.com/items?itemName=zhuangtongfa.Material-theme>   
+
+---
+
+## Icon
+
+```
+{
   "workbench.iconTheme": "vscode-icons",
 }
 ```
 
-**Reference**
-<https://marketplace.visualstudio.com/items?itemName=zhuangtongfa.Material-theme>   
+**Reference**   
 <https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons>   
 
 ---
@@ -85,14 +96,14 @@ Edit the configuration file settings.json.
 }
 ```
 
-**Reference**
+**Reference**   
 <https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-autoprefixer>   
 
 ---
 
 ## Prettier
 
-**Terminal**
+**Terminal**   
 ```
 $ npm i -g prettier
 ```
@@ -152,16 +163,16 @@ Edit the configuration file settings.json.
 }
 ```
 
-**Reference**
+**Reference**   
 <https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode>   
 
 ---
 
 ## Stylelint
 
-**Terminal**
+**Terminal**   
 ```
-$ npm i -g stylelint stylelint-scss stylelint-order stylelint-config-standard stylelint-config-prettier 
+$ npm i -g stylelint stylelint-scss stylelint-order stylelint-prettier stylelint-config-prettier 
 ```
 
 **VSCode**   
@@ -177,9 +188,10 @@ Edit the configuration file settings.json.
   "scss.validate": false,
   "stylelint.enable": true,
   "stylelint.config": {
-    "plugins": ["stylelint-scss", "stylelint-order"],
-    "extends": ["stylelint-config-standard", "stylelint-config-prettier"],
+    "plugins": ["stylelint-scss", "stylelint-order", "stylelint-prettier"],
+    "extends": ["stylelint-prettier/recommended"],
     "rules": {
+      "prettier/prettier": [true, { "singleQuote": true }],
       "indentation": 2,
       "declaration-block-trailing-semicolon": "always",
       "selector-pseudo-element-colon-notation": "single",
@@ -203,18 +215,18 @@ Edit the configuration file settings.json.
   },
   "[css]": {
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
   },
   "[scss]": {
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
   },
 }
 ```
 
-**Reference**
+**Reference**   
 <https://stylelint.io/>   
-<https://github.com/stylelint/stylelint-config-standard>   
+<https://github.com/prettier/stylelint-prettier>   
 <https://maximgatilin.github.io/stylelint-config/>   
 <https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint>   
 
@@ -222,12 +234,12 @@ Edit the configuration file settings.json.
 
 ## ESLint
 
-**Terminal**
+**Terminal**   
 ```
 $ npm i -g eslint eslint-plugin-prettier eslint-config-prettier
 ```
 
-**Global**
+**Global**   
 ```
 $ npm bin -g
 $ vi /Users/[user]/.bash_profile
@@ -237,7 +249,7 @@ $ vi /Users/[user]/.bash_profile
 PATH=$PATH:~/node/bin
 ```
 
-**Permission**
+**Permission**   
 ```
 $ sudo su
 $ chown [user]:group /usr/local/lib/node_modules
@@ -245,7 +257,7 @@ $ chown -R [user]:group /Users/[user]/node/lib
 $ chown -R [user]:group /Users/[user]/node/bin
 ```
 
-**Configure**
+**Configure**   
 ```
 $ npm init -y
 $ eslint --init
